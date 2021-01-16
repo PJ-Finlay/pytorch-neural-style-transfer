@@ -6,7 +6,7 @@
 import subprocess
 from pathlib import Path
 
-DEBUG=True
+DEBUG=False
 
 def run_command(args):
     if DEBUG:
@@ -29,7 +29,7 @@ for content_image in content_images:
         run_command(['python3', 'neural_style_transfer.py',
             '--content_img_name', content_image,
             '--style_img_name', style_image,
-            '--height', 720])
+            '--height', '720'])
         i += 1
         print('Finished image ' + str(i))
 
